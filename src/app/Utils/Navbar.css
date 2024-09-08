@@ -1,0 +1,24 @@
+.nav-items-anim {
+      position: relative;
+      padding: 10px 2px;
+}
+
+.nav-items-anim::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: linear-gradient(0deg, var(--white-stroke-color) 22.4%, var(--blue-color) 60.94%, var(--white-stroke-color));
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      /* Position the line at the bottom of the element */
+      z-index: 20;
+      transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+}
+
+.nav-items-anim:hover::after {
+      opacity: 1;
+      width: 100%;
+      /* Expands the width to 100% on hover */
+}

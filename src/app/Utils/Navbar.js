@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/logo.png";
 import { GreaterThan } from "@phosphor-icons/react";
+import "./Navbar.css";
 
 const Navbar = () => {
       return (
@@ -32,7 +33,10 @@ const Navbar = () => {
                         <ul className="flex items-center gap-10">
                               {["Home", "About", "Services", "Contact"].map(
                                     (item, index) => (
-                                          <li key={index}>
+                                          <li
+                                                key={index}
+                                                className=" nav-items-anim"
+                                          >
                                                 <Link
                                                       href={`/#${item.toLocaleLowerCase()}`}
                                                 >
