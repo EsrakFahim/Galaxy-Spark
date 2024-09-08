@@ -1,9 +1,10 @@
 import React from "react";
+import HeroSection from "@/app/Components/HeroSection/page";
 
 const page = () => {
       return (
-            <div className="h-[500vh]">
-                  
+            <div className="">
+                  <HeroSection />
             </div>
       );
 };

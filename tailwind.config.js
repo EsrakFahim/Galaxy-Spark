@@ -33,6 +33,23 @@ module.exports = {
                               dark: "#000000",
                         },
                   },
+                  keyframes: {
+                        glow: {
+                              "0%, 100%": {
+                                    opacity: "1",
+                                    boxShadow:
+                                          "0 0 10px 5px rgba(39, 142, 255, 0.7)",
+                              },
+                              "50%": {
+                                    opacity: "0.5",
+                                    boxShadow:
+                                          "0 0 20px 10px rgba(39, 142, 255, 0.5)",
+                              },
+                        },
+                  },
+                  animation: {
+                        glow: "glow 3s infinite",
+                  },
             },
       },
       plugins: [],

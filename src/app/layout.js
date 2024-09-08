@@ -14,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
       return (
             <html lang="en">
-                  <body className={`${inter.className} bg-background-dark`}>
+                  <body className={`${inter.className} bg-background-dark text-primary`}>
                         <div className=" sm:w-full max-w-[1440px] mx-auto overflow-hidden">
-                              <div className="max-w-[1440px] mx-auto absolute top-0 left-0 right-0 -z-10">
+                              <div className="max-w-[1440px] h-[32.2rem] lg:h-[23rem] mx-auto absolute top-0 left-0 right-0 -z-10">
                                     <Image
                                           src={heroBG}
                                           alt="Hero_bg"
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
                                           className="w-full h-full object-cover "
                                     />
                               </div>
-                              <div className="max-w-[1280px] overflow-hidden mx-auto">
+                              <div className="max-w-[1240px] overflow-hidden mx-auto">
                                     <Navbar />
                                     {children}
                               </div>
