@@ -31,23 +31,26 @@ const Navbar = () => {
                   </div>
                   <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-[2] hidden lg:flex justify-center">
                         <ul className="flex items-center gap-10">
-                              {["Home", "About", "Services", "Contact"].map(
-                                    (item, index) => (
-                                          <li
-                                                key={index}
-                                                className=" nav-items-anim"
-                                          >
-                                                <Link
-                                                      href={`/#${item.toLocaleLowerCase()}`}
-                                                >
-                                                      <div className="hover:text-neutral-500 duration-300 text-sm">
-                                                            {" "}
-                                                            {item}{" "}
-                                                      </div>
-                                                </Link>
+                              {[
+                                    "Home",
+                                    "About",
+                                    "Services",
+                                    "Pricing",
+                                    "Contact",
+                              ].map((item, index) => (
+                                    <Link
+                                          key={index}
+                                          className="hover:text-neutral-500 duration-300 nav-items-anim"
+                                          href={`/#${item.toLocaleLowerCase()}`}
+                                    >
+                                          <li>
+                                                <div className="text-sm">
+                                                      {" "}
+                                                      {item}{" "}
+                                                </div>
                                           </li>
-                                    )
-                              )}
+                                    </Link>
+                              ))}
                         </ul>
                   </div>
             </nav>
