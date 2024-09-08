@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { PortfolioNav } from "./PortfolioNav";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-const ProjectsComponent = () => {
+const Page = () => {
       const [projects, setProjects] = useState([]);
       const [sortedProjects, setSortedProjects] = useState([]);
       const [activeTab, setActiveTab] = useState("Web Development");
@@ -51,8 +53,6 @@ const ProjectsComponent = () => {
             setSortedProjects(sortedArray);
       };
 
-      console.log(activeTab);
-
       return (
             <div id="portfolio" className="my-[20rem]">
                   <div>
@@ -82,13 +82,90 @@ const ProjectsComponent = () => {
                         </div>
                   </div>
                   <div className="flex justify-center">
-                        <PortfolioNav items={sortedProjects} setActiveTab={setActiveTab} />
+                        <PortfolioNav
+                              items={sortedProjects}
+                              setActiveTab={setActiveTab}
+                        />
                   </div>
-                  <div>
-
-                  </div>
+                  <motion.div
+                        animate={{ opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        layout
+                        duration={1}
+                        className=""
+                  >
+                        {/* You can now render projects based on the activeTab */}
+                        {sortedProjects
+                              .filter(
+                                    (project) => project.category === activeTab
+                              )
+                              .map((filteredProject, index) => (
+                                    <div key={index}>
+                                          <motion.div
+                                                animate={{ opacity: 1 }}
+                                                initial={{ opacity: 0 }}
+                                                transition={{ duration: 1 }}
+                                                layout
+                                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 lg:px-5 gap-10"
+                                          >
+                                                {filteredProject.projects.map(
+                                                      (project) => (
+                                                            <motion.div
+                                                                  key={
+                                                                        project.id
+                                                                  }
+                                                                  initial={{
+                                                                        opacity: 0,
+                                                                  }}
+                                                                  animate={{
+                                                                        opacity: 1,
+                                                                  }}
+                                                                  layout
+                                                                  transition={{
+                                                                        duration: 0.5,
+                                                                  }}
+                                                                  whileHover={{
+                                                                        scale: 0.95,
+                                                                  }} // Use framer-motion's whileHover to scale
+                                                                  className="relative aspect-square rounded-3xl overflow-hidden cursor-pointer flex items-end p-10"
+                                                                  style={{
+                                                                        boxShadow:
+                                                                              "0 0 10px 5px rgba( 39, 39, 39,  0.7)",
+                                                                  }}
+                                                            >
+                                                                  <Image
+                                                                        src={
+                                                                              project.projectImage
+                                                                        }
+                                                                        alt={
+                                                                              project.projectName
+                                                                        }
+                                                                        width={
+                                                                              400
+                                                                        }
+                                                                        height={
+                                                                              400
+                                                                        }
+                                                                        placeholder="blur"
+                                                                        blurDataURL={`${project.projectImage}?w=10&blur=20`}
+                                                                        className="w-full h-full absolute top-0 right-0 left-0 inset-0 object-cover object-center rounded-3xl -z-[1]"
+                                                                  />
+                                                                  <div>
+                                                                        <h4 className="text-[1.25rem] font-extralight leading-[-1.2%]">
+                                                                              {
+                                                                                    project.projectName
+                                                                              }
+                                                                        </h4>
+                                                                  </div>
+                                                            </motion.div>
+                                                      )
+                                                )}
+                                          </motion.div>
+                                    </div>
+                              ))}
+                  </motion.div>
             </div>
       );
 };
 
-export default ProjectsComponent;
+export default Page;

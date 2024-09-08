@@ -26,24 +26,22 @@ const SlideTabs = ({ items, setActiveTab }) => {
                   }}
                   className="relative mx-auto flex w-fit rounded-full border-2 border-white p-1"
             >
-                  {items.map((item, index) => {
-                        return (
-                              <Tab
-                                    key={index}
-                                    setPosition={setPosition}
-                                    onClick={() => setActiveTab(item?.category)}
-                              >
-                                    {item.category}
-                              </Tab>
-                        );
-                  })}
+                  {items.map((item, index) => (
+                        <Tab
+                              key={index}
+                              setPosition={setPosition}
+                              onClick={() => setActiveTab(item.category)} // Ensure this is properly passed
+                        >
+                              {item.category}
+                        </Tab>
+                  ))}
 
                   <Cursor position={position} />
             </ul>
       );
 };
 
-const Tab = ({ children, setPosition }) => {
+const Tab = ({ children, setPosition, onClick }) => {
       const ref = useRef(null);
 
       return (
@@ -60,7 +58,8 @@ const Tab = ({ children, setPosition }) => {
                               opacity: 1,
                         });
                   }}
-                  className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+                  onClick={onClick} // Adding the onClick event here
+                  className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs  uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
             >
                   {children}
             </li>
