@@ -2,14 +2,12 @@
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 150px;
-      margin-top: 20rem;
+      margin-top: 15rem;
       display: flex;
       justify-content: center;
 
       .body {
             max-width: 1400px;
-            display: flex;
-            gap: 50px;
             position: relative;
 
             p {
@@ -66,5 +64,37 @@
             padding: 20px;
             border-radius: 40px;
             border: 1px solid grey;
+      }
+}
+
+
+// Adjust font size for tablets
+@media (max-width: 768px) {
+      .body p:nth-of-type(1) {
+            font-size: 30px !important;
+      }
+
+      .body p:nth-of-type(2) {
+            font-size: 16px !important;
+      }
+}
+
+// Adjust font size for mobile
+@media (max-width: 640px) {
+      .body p:nth-of-type(1) {
+            font-size: 24px !important;
+      }
+
+      .body p:nth-of-type(2) {
+            font-size: 14px !important;
+      }
+      .button{
+            width: 150px !important;
+            height: 150px !important;
+            top: 95% !important;
+            left: calc(100% - 120px) !important;
+            p{
+                  font-size: 14px !important;
+            }
       }
 }

@@ -2,21 +2,45 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 import { AiOutlineRight } from "react-icons/ai";
 import "./Navbar.css";
 import Magnetic from "../AminUtils/Magnetic/Magnetic";
 
 const Navbar = () => {
+      const [isScrolled, setIsScrolled] = useState(false);
+
+      // Detect scrolling to trigger class change
+      useEffect(() => {
+            const handleScroll = () => {
+                  if (window.scrollY > 50) {
+                        setIsScrolled(true);
+                  } else {
+                        setIsScrolled(false);
+                  }
+            };
+
+            window.addEventListener("scroll", handleScroll);
+            return () => {
+                  window.removeEventListener("scroll", handleScroll);
+            };
+      }, []);
+
       return (
             <nav className="text-primary-dark relative w-full px-[10rem] py-[50px] mx-auto ">
-                  <div className="fixed top-5 left-0 right-0 z-[2] flex justify-center items-center px-5 lg:px-10  ">
-                        <div className="w-[1280px] flex justify-between items-center">
+                  <div
+                        className={`fixed top-0 left-0 right-0 z-[2] flex justify-center items-center py-5  lg:px-10 duration-300 ${
+                              isScrolled
+                                    ? "bg-customBg z-[50] rounded-custom shadow-custom backdrop-blur" // Custom background when scrolled
+                                    : "bg-transparent z-[2]" // Initial background
+                        }`}
+                  >
+                        <div className="w-screen flex justify-between items-center px-5 lg:px-40">
                               <Link href="/#home">
                                     <div>
                                           <Image
-                                                src={logo}
+                                                src={logo} // Update with your logo path
                                                 alt="logo"
                                                 width={100}
                                                 height={50}
@@ -35,7 +59,6 @@ const Navbar = () => {
                   <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-[2] hidden lg:flex justify-center">
                         <ul className="flex items-center gap-10">
                               {[
-                                    "Home",
                                     "About",
                                     "Portfolio",
                                     "Services",

@@ -32,6 +32,16 @@ module.exports = {
                               light: "#F3F4F6",
                               dark: "#000000",
                         },
+                        customBg: "rgba(34, 34, 34, 0.44)", // Add custom background color
+                  },
+                  boxShadow: {
+                        custom: "0 4px 30px rgba(0, 0, 0, 0.1)", // Add custom box-shadow
+                  },
+                  borderRadius: {
+                        custom: "16px", // Add custom border-radius
+                  },
+                  backdropFilter: {
+                        blur: "blur(5.6px)", // Add custom backdrop-filter
                   },
                   keyframes: {
                         glow: {
@@ -52,5 +62,7 @@ module.exports = {
                   },
             },
       },
-      plugins: [],
+      plugins: [
+            require("tailwindcss-filters"), // For backdrop-filter support
+      ],
 };

@@ -13,8 +13,8 @@ const AboutUs = () => {
       const isInView = useInView(description);
       return (
             <div id="about" ref={description} className="description">
-                  <div className="body">
-                        <p>
+                  <div className="body flex flex-col lg:flex-row  gap-12 ">
+                        <p className="">
                               {phrase.split(" ").map((word, index) => {
                                     return (
                                           <span key={index} className="mask">

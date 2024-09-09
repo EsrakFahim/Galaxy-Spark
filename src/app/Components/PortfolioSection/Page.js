@@ -54,10 +54,10 @@ const Page = () => {
       };
 
       return (
-            <div id="portfolio" className="my-[20rem]">
+            <div id="portfolio" className="my-[20rem] pt-28">
                   <div>
-                        <div className="flex justify-between items-end">
-                              <div className="flex flex-col items-start gap-6">
+                        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end">
+                              <div className="flex flex-col justify-center items-center lg:items-start gap-6 text-center lg:text-start">
                                     <p className="bg-buttonSecondary border border-buttonPrimary text-buttonPrimary px-4 py-2 rounded-full">
                                           Portfolio
                                     </p>
@@ -65,13 +65,13 @@ const Page = () => {
                                           style={{
                                                 lineHeight: "1.3",
                                           }}
-                                          className="text-5xl font-extralight"
+                                          className=" text-4xl lg:text-5xl font-extralight"
                                     >
                                           Delivering Excellence <br /> to Our
                                           Clients
                                     </h2>
                               </div>
-                              <div className="max-w-[30%] text-neutral-500">
+                              <div className="w-full md:max-w-[50%] lg:max-w-[30%] text-neutral-500 text-center lg:text-start ">
                                     <p>
                                           Our portfolio showcases innovative
                                           solutions, exceeding expectations, and
@@ -103,8 +103,14 @@ const Page = () => {
                               .map((filteredProject, index) => (
                                     <div key={index}>
                                           <motion.div
-                                                animate={{ opacity: 1 }}
-                                                initial={{ opacity: 0 }}
+                                                animate={{
+                                                      opacity: 1,
+                                                      scale: 1,
+                                                }}
+                                                initial={{
+                                                      opacity: 0,
+                                                      scale: 0.7,
+                                                }}
                                                 transition={{ duration: 1 }}
                                                 layout
                                                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 lg:px-5 gap-10"
@@ -117,9 +123,11 @@ const Page = () => {
                                                                   }
                                                                   initial={{
                                                                         opacity: 0,
+                                                                        scale: 0.7,
                                                                   }}
                                                                   animate={{
                                                                         opacity: 1,
+                                                                        scale: 1,
                                                                   }}
                                                                   layout
                                                                   transition={{
