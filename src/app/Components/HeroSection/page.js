@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
       return (
-            <div id="home">
+            <div>
                   <div className="flex flex-col items-center my-[10rem] lg:mx-10 gap-5">
                         <h1
                               style={{

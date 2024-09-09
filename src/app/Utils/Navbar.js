@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/assets/logo.png";
 import { AiOutlineRight } from "react-icons/ai";
 import "./Navbar.css";
+import Magnetic from "../AminUtils/Magnetic/Magnetic";
 
 const Navbar = () => {
       return (
@@ -44,12 +47,14 @@ const Navbar = () => {
                                           className="hover:text-neutral-500 duration-300 nav-items-anim"
                                           href={`/#${item.toLocaleLowerCase()}`}
                                     >
-                                          <li>
-                                                <div className="text-sm">
-                                                      {" "}
-                                                      {item}{" "}
-                                                </div>
-                                          </li>
+                                          <Magnetic>
+                                                <li>
+                                                      <div className="text-sm">
+                                                            {" "}
+                                                            {item}{" "}
+                                                      </div>
+                                                </li>
+                                          </Magnetic>
                                     </Link>
                               ))}
                         </ul>

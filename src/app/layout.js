@@ -3,6 +3,7 @@ import "./globals.css";
 import Image from "next/image";
 import heroBG from "@/assets/hero-bg.jpg";
 import Navbar from "./Utils/Navbar";
+import Cursor from "./Utils/Cursor/Cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
       return (
             <html lang="en">
-                  <body className={`${inter.className} bg-background-dark text-primary`}>
+                  <body
+                        id="home"
+                        className={`${inter.className} bg-background-dark text-primary`}
+                  >
                         <div className=" sm:w-full max-w-[1440px] mx-auto overflow-hidden">
                               <div className="max-w-[1440px] h-[32.2rem] lg:h-[23rem] mx-auto absolute top-0 left-0 right-0 -z-10">
                                     <Image
@@ -30,6 +34,7 @@ export default function RootLayout({ children }) {
                                     {children}
                               </div>
                         </div>
+                        <Cursor />
                   </body>
             </html>
       );
