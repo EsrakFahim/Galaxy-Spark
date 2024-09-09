@@ -3,6 +3,7 @@ import HeroSection from "@/app/Components/HeroSection/page";
 import PortfolioSection from "@/app/Components/PortfolioSection/Page";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/Services/Sercvices";
+import Pricing from "./Components/Pricing/Pricing";
 
 const page = () => {
       return (
@@ -11,6 +12,7 @@ const page = () => {
                   <AboutUs/>
                   <PortfolioSection />
                   <Services/>
+                  <Pricing/>
             </div>
       );
 };

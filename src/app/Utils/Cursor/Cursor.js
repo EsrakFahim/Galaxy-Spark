@@ -118,7 +118,7 @@ export default function Cursor({ stickyElement }) {
       }, [isHovered, stickyElement]);
 
       return (
-            <div className="cursorContainer">
+            <div className="cursorContainer hidden lg:block">
                   <motion.div
                         ref={cursor}
                         style={{

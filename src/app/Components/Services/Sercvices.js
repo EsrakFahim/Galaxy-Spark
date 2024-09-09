@@ -28,7 +28,7 @@ function Services() {
                               <span className="border border-buttonPrimary bg-buttonSecondary text-buttonPrimary px-3 py-2 rounded-full ">
                                     Our Services
                               </span>
-                              <h2 className="text-2xl lg:text-4xl font-bold my-8">
+                              <h2 className="text-2xl lg:text-4xl font-extralight my-8">
                                     We provide a wide range of services to help{" "}
                                     <br />
                                     you grow your business.
