@@ -1,15 +1,19 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export const PortfolioNav = ({ items, setActiveTab }) => {
+export const PortfolioNav = ({ items, setActiveTab, activeTab }) => {
       return (
             <div className="py-20">
-                  <SlideTabs items={items} setActiveTab={setActiveTab} />
+                  <SlideTabs
+                        items={items}
+                        setActiveTab={setActiveTab}
+                        activeTab={activeTab}
+                  />
             </div>
       );
 };
 
-const SlideTabs = ({ items, setActiveTab }) => {
+const SlideTabs = ({ items, setActiveTab, activeTab }) => {
       const [position, setPosition] = useState({
             left: 0,
             width: 0,
@@ -30,7 +34,9 @@ const SlideTabs = ({ items, setActiveTab }) => {
                         <Tab
                               key={index}
                               setPosition={setPosition}
-                              onClick={() => setActiveTab(item.category)} // Ensure this is properly passed
+                              onClick={() => setActiveTab(item.category)}
+                              category={item.category}
+                              activeTab={activeTab} // Pass activeTab here
                         >
                               {item.category}
                         </Tab>
@@ -41,7 +47,7 @@ const SlideTabs = ({ items, setActiveTab }) => {
       );
 };
 
-const Tab = ({ children, setPosition, onClick }) => {
+const Tab = ({ children, setPosition, onClick, activeTab, category }) => {
       const ref = useRef(null);
 
       return (
@@ -58,8 +64,12 @@ const Tab = ({ children, setPosition, onClick }) => {
                               opacity: 1,
                         });
                   }}
-                  onClick={onClick} // Adding the onClick event here
-                  className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs  uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+                  onClick={onClick}
+                  className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase mix-blend-difference md:px-5 md:py-3 md:text-base ${
+                        activeTab === category
+                              ? "text-buttonPrimary"
+                              : "text-white"
+                  } duration-300`}
             >
                   {children}
             </li>

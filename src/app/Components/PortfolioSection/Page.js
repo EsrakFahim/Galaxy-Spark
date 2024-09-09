@@ -85,6 +85,7 @@ const Page = () => {
                         <PortfolioNav
                               items={sortedProjects}
                               setActiveTab={setActiveTab}
+                              activeTab={activeTab}
                         />
                   </div>
                   <motion.div
