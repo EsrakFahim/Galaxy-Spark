@@ -15,6 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
       return (
             <html lang="en">
+                  <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
                   <body
                         id="home"
                         className={`${inter.className} bg-background-dark text-primary`}

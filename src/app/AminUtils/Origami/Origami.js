@@ -2,7 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { SiUpwork, SiGithub, SiFreelancer, SiMeta, SiTwitch } from "react-icons/si";
+import {
+      SiUpwork,
+      SiGithub,
+      SiFreelancer,
+      SiMeta,
+      SiTwitch,
+} from "react-icons/si";
 import { TbBrandFiverr } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -68,7 +74,7 @@ const LogoRolodex = ({ items }) => {
                         transform: "rotateY(-20deg)",
                         transformStyle: "preserve-3d",
                   }}
-                  className="relative z-0 h-[80%] w-full shrink-0 rounded-xl "
+                  className="relative z-0 h-44 w-60 shrink-0 rounded-xl border border-neutral-700 bg-neutral-800"
             >
                   <AnimatePresence mode="sync">
                         <motion.div
@@ -117,7 +123,7 @@ const LogoRolodex = ({ items }) => {
                         style={{
                               transform: "translateZ(1px)",
                         }}
-                        className="absolute left-0 right-0 top-1/2 z-[999999999] -translate-y-1/2 border-t-2 border-transparent"
+                        className="absolute left-0 right-0 top-1/2 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
                   />
             </div>
       );
