@@ -1,6 +1,9 @@
+"use client";
+
 import { DivOrigami } from "@/app/AminUtils/Origami/Origami";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
+import "./Pricing.scss";
 
 const priceData = [
       {
@@ -44,6 +47,20 @@ const priceData = [
 ];
 
 const Pricing = () => {
+      useEffect(() => {
+            const updateCursor = (event) => {
+                  const { clientX: x, clientY: y } = event;
+                  document.documentElement.style.setProperty("--x", x);
+                  document.documentElement.style.setProperty("--y", y);
+            };
+
+            document.addEventListener("pointermove", updateCursor);
+
+            return () => {
+                  document.removeEventListener("pointermove", updateCursor);
+            };
+      }, []);
+
       return (
             <div id="pricing" className="py-32">
                   <div>
@@ -56,7 +73,7 @@ const Pricing = () => {
                                           style={{
                                                 lineHeight: "1.3",
                                           }}
-                                          className="text-2xl lg:text-4xl  text-center font-extralight"
+                                          className="text-2xl lg:text-4xl text-center font-extralight"
                                     >
                                           Choose the relevant plan to build,
                                           <br />
@@ -65,11 +82,11 @@ const Pricing = () => {
                               </div>
                         </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2.2rem] my-20 px-4 lg:px-0 ">
-                        {priceData.map((price, index) => (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2.2rem] my-20 px-4 lg:px-0">
+                        {priceData?.map((price, index) => (
                               <div
                                     key={index}
-                                    className="bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]"
+                                    className="card bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]"
                               >
                                     <div className="text-start flex flex-col gap-4 ">
                                           <h1 className="text-base font-extralight">
@@ -113,8 +130,8 @@ const Pricing = () => {
                                     </div>
                               </div>
                         ))}
-                        <div className="flex flex-col md:flex-row lg:flex-col gap-10 md:col-span-2 lg:col-span-1">
-                              <div className="min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
+                        <div className=" flex flex-col md:flex-row lg:flex-col gap-10 md:col-span-2 lg:col-span-1">
+                              <div className="card min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
                                     <div>
                                           <h5 className="text-2xl font-extralight">
                                                 Also accepting orders from:
@@ -122,7 +139,7 @@ const Pricing = () => {
                                     </div>
                                     <DivOrigami />
                               </div>
-                              <div className="min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
+                              <div className="card min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
                                     <div className="flex flex-col gap-4">
                                           <h2 className="text-4xl font-extralight">
                                                 Refer & Earn
