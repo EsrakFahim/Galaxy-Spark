@@ -28,6 +28,19 @@
                   color: #7c8e9a;
             }
 
+            .marquee-bg-gradient::before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  top: 0;
+                  transform: rotate(180deg);
+                  z-index: -1;
+                  background: radial-gradient(36.2% 69.16% at 51.5% 0%, #ffffff40, #fff0 62%);
+                  opacity: 0.5;
+            }
+
             .marquee {
                   position: relative;
                   display: flex;

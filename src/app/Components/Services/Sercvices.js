@@ -38,56 +38,58 @@ function Services() {
                               We provide a wide range of services to help you
                               grow your business.
                         </div>
-                        <div className="marquee">
-                              <div className="marquee-group">
-                                    {row1.map((el, index) => (
-                                          <div
-                                                key={index}
-                                                className="services-groupe "
-                                          >
-                                                <div className=" bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
-                                                      {el}
+                        <div className="marquee-bg-gradient">
+                              <div className="marquee">
+                                    <div className="marquee-group">
+                                          {row1.map((el, index) => (
+                                                <div
+                                                      key={index}
+                                                      className="services-groupe "
+                                                >
+                                                      <div className=" bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
+                                                            {el}
+                                                      </div>
                                                 </div>
-                                          </div>
-                                    ))}
+                                          ))}
+                                    </div>
+                                    <div className="marquee-group">
+                                          {row1.map((el, index) => (
+                                                <div
+                                                      key={index}
+                                                      className="services-groupe"
+                                                >
+                                                      <div className=" bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
+                                                            {el}
+                                                      </div>
+                                                </div>
+                                          ))}
+                                    </div>
                               </div>
-                              <div className="marquee-group">
-                                    {row1.map((el, index) => (
-                                          <div
-                                                key={index}
-                                                className="services-groupe"
-                                          >
-                                                <div className=" bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
-                                                      {el}
+                              <div className="marquee">
+                                    <div className="marquee-group-reverse">
+                                          {row2.map((el, index) => (
+                                                <div
+                                                      key={index}
+                                                      className="services-groupe"
+                                                >
+                                                      <div className="bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
+                                                            {el}
+                                                      </div>
                                                 </div>
-                                          </div>
-                                    ))}
-                              </div>
-                        </div>
-                        <div className="marquee">
-                              <div className="marquee-group-reverse">
-                                    {row2.map((el, index) => (
-                                          <div
-                                                key={index}
-                                                className="services-groupe"
-                                          >
-                                                <div className="bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
-                                                      {el}
+                                          ))}
+                                    </div>
+                                    <div className="marquee-group-reverse">
+                                          {row2.map((el, index) => (
+                                                <div
+                                                      key={index}
+                                                      className="services-groupe"
+                                                >
+                                                      <div className="bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
+                                                            {el}
+                                                      </div>
                                                 </div>
-                                          </div>
-                                    ))}
-                              </div>
-                              <div className="marquee-group-reverse">
-                                    {row2.map((el, index) => (
-                                          <div
-                                                key={index}
-                                                className="services-groupe"
-                                          >
-                                                <div className="bg-secondary border border-neutral-600 px-3 py-2 rounded-full hover:bg-neutral-600 duration-300">
-                                                      {el}
-                                                </div>
-                                          </div>
-                                    ))}
+                                          ))}
+                                    </div>
                               </div>
                         </div>
                   </div>
