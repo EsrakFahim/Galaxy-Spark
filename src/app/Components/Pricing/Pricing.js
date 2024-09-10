@@ -92,12 +92,12 @@ const Pricing = () => {
                                           <h1 className="text-base font-extralight">
                                                 {price.plan}
                                           </h1>
-                                          <p className="text-5xl font-extralight text-buttonPrimary">
+                                          <p className="flex items-end gap-1 text-5xl font-extralight text-buttonPrimary">
                                                 {price.price}
-                                                <span className="text-lg text-white">
+                                                <div className="text-lg text-white font-extralight">
                                                       {" "}
                                                       / {price.paymentCondition}
-                                                </span>
+                                                </div>
                                           </p>
                                           <p className="text-sm text-gray-500 underline">
                                                 {price.requests}
