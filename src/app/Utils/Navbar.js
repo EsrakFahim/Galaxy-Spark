@@ -43,8 +43,8 @@ const Navbar = () => {
                                                 src={logo} // Update with your logo path
                                                 alt="logo"
                                                 width={100}
-                                                height={50}
-                                                className="cursor-pointer w-20 h-10"
+                                                height={100}
+                                                className="cursor-pointer w-32 h-14 "
                                           />
                                     </div>
                               </Link>

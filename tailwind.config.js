@@ -19,14 +19,14 @@ module.exports = {
                               dark: "#151514",
                         },
                         buttonPrimary: {
-                              DEFAULT: "#278eff",
-                              light: "#278eff",
-                              dark: "#278eff",
+                              DEFAULT: "#67b9b6",
+                              light: "#67b9b6",
+                              dark: "#67b9b6",
                         },
                         buttonSecondary: {
-                              DEFAULT: "#091d33",
-                              light: "#091d33",
-                              dark: "#091d33",
+                              DEFAULT: "#214444",
+                              light: "#214444",
+                              dark: "#214444",
                         },
                         background: {
                               light: "#F3F4F6",
@@ -48,12 +48,12 @@ module.exports = {
                               "0%, 100%": {
                                     opacity: "1",
                                     boxShadow:
-                                          "0 0 10px 5px rgba(39, 142, 255, 0.7)",
+                                          "0 0 10px 5px rgba(103,185,182, 0.7)",
                               },
                               "50%": {
                                     opacity: "0.5",
                                     boxShadow:
-                                          "0 0 20px 10px rgba(39, 142, 255, 0.5)",
+                                          "0 0 20px 10px rgba(103,185,182, 0.5)",
                               },
                         },
                   },
