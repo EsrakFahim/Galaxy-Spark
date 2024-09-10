@@ -6,17 +6,20 @@ import Services from "./Components/Services/Sercvices";
 import Pricing from "./Components/Pricing/Pricing";
 import { TextParallaxContentExample } from "./Components/Test";
 import CurveLine from "./AminUtils/CurveLine/CurveLine";
+import { motion } from "framer-motion";
+import FAQ from "./Components/FAQ/FAQ";
 
 const page = () => {
       return (
             <div className="">
                   <HeroSection />
-                  <AboutUs/>
+                  <AboutUs />
                   <PortfolioSection />
-                  <Services/>
-                  <CurveLine/>
-                  <Pricing/>
-                  <TextParallaxContentExample/>
+                  <Services />
+                  <CurveLine />
+                  <Pricing />
+                  <TextParallaxContentExample />
+                  <FAQ/>
             </div>
       );
 };

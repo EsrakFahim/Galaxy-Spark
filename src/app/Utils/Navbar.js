@@ -63,6 +63,7 @@ const Navbar = () => {
                                     "Portfolio",
                                     "Services",
                                     "Pricing",
+                                    "FAQ",
                                     "Contact",
                               ].map((item, index) => (
                                     <Link
