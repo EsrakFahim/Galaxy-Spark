@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { opacity, slideUp } from "./animation";
 import Rounded from "@/app/AminUtils/Rounded/Rounded";
 import "./AboutUs.scss";
+import CurveLine from "@/app/AminUtils/CurveLine/CurveLine";
 
 const AboutUs = () => {
       const phrase =
@@ -47,6 +48,9 @@ const AboutUs = () => {
                                     <p>About Us</p>
                               </Rounded>
                         </div>
+                  </div>
+                  <div className="w-full py-10">
+                        <CurveLine />
                   </div>
             </div>
       );

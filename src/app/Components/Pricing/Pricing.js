@@ -94,10 +94,10 @@ const Pricing = () => {
                                           </h1>
                                           <p className="flex items-end gap-1 text-5xl font-extralight text-buttonPrimary">
                                                 {price.price}
-                                                <div className="text-lg text-white font-extralight">
+                                                <span className="text-lg text-white font-extralight">
                                                       {" "}
                                                       / {price.paymentCondition}
-                                                </div>
+                                                </span>
                                           </p>
                                           <p className="text-sm text-gray-500 underline">
                                                 {price.requests}

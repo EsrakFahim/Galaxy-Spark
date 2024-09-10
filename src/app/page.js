@@ -5,6 +5,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/Services/Sercvices";
 import Pricing from "./Components/Pricing/Pricing";
 import { TextParallaxContentExample } from "./Components/Test";
+import CurveLine from "./AminUtils/CurveLine/CurveLine";
 
 const page = () => {
       return (
@@ -13,6 +14,7 @@ const page = () => {
                   <AboutUs/>
                   <PortfolioSection />
                   <Services/>
+                  <CurveLine/>
                   <Pricing/>
                   <TextParallaxContentExample/>
             </div>
