@@ -50,7 +50,7 @@ const Navbar = () => {
                               </Link>
                               <div>
                                     <button className="border border-buttonPrimary px-8 py-4 rounded-full bg-buttonSecondary hover:bg-buttonPrimary duration-300 text-xs lg:text-base lg:font-medium flex items-center gap-1 hover:gap-3">
-                                          Take a schedule
+                                          Book an appointment
                                           <AiOutlineRight size={20} />
                                     </button>
                               </div>
