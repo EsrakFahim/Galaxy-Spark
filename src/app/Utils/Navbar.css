@@ -7,7 +7,7 @@
       content: "";
       width: 0;
       height: 2px;
-      background: linear-gradient(0deg, var(--white-stroke-color) 22.4%, var(--blue-color) 60.94%, var(--white-stroke-color));
+      background: linear-gradient(0deg, var(--white-stroke-color) 22.4%, var(--primary-color) 60.94%, var(--white-stroke-color));
       position: absolute;
       left: 0;
       bottom: 0;

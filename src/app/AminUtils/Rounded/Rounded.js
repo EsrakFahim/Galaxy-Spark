@@ -8,7 +8,7 @@ import Magnetic from "../Magnetic/Magnetic";
 
 export default function Rounded({
       children,
-      backgroundColor = "#278eff",
+      backgroundColor = "#67b9b6",
       ...attributes
 }) {
       const circle = useRef(null);
