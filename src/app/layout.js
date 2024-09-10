@@ -4,6 +4,7 @@ import Image from "next/image";
 import heroBG from "@/assets/hero-bg.png";
 import Navbar from "./Utils/Navbar";
 import Cursor from "./Utils/Cursor/Cursor";
+import LoadingAmin from "./AminUtils/LoadingAmin/LoadingAmin";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,8 @@ export default function RootLayout({ children }) {
                         id="home"
                         className={`${inter.className} bg-background-dark text-primary`}
                   >
-                        <div className=" sm:w-full max-w-[1440px] mx-auto overflow-hidden">
-                              <div className="max-w-[1440px] min-h-[22rem] lg:min-h-[23rem] mx-auto absolute top-0 lg:-top-28 left-0 right-0 -z-10">
+                        <div className=" w-full   overflow-hidden">
+                              <div className="w-full min-h-[22rem] lg:min-h-[23rem] mx-auto absolute top-0 lg:-top-28 left-0 right-0 -z-10">
                                     <Image
                                           src={heroBG}
                                           alt="Hero_bg"
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
                               </div>
                         </div>
                         <Cursor />
+                        {/* <LoadingAmin /> */}
                   </body>
             </html>
       );
