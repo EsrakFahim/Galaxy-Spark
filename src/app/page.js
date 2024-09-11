@@ -8,10 +8,11 @@ import { TextParallaxContentExample } from "./Components/Test";
 import CurveLine from "./AminUtils/CurveLine/CurveLine";
 import { motion } from "framer-motion";
 import FAQ from "./Components/FAQ/FAQ";
+import Feedback from "./Components/Feedback/Feedback";
 
 const page = () => {
       return (
-            <div className="">
+            <div className="w-full">
                   <HeroSection />
                   <AboutUs />
                   <PortfolioSection />
@@ -20,6 +21,7 @@ const page = () => {
                   <Pricing />
                   <TextParallaxContentExample />
                   <FAQ/>
+                  <Feedback/>
             </div>
       );
 };

@@ -63,6 +63,7 @@ const Navbar = () => {
                                     "Portfolio",
                                     "Services",
                                     "Pricing",
+                                    "Why US?",
                                     "FAQ",
                                     "Contact",
                               ].map((item, index) => (
