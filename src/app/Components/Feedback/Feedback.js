@@ -177,7 +177,7 @@ const Feedback = () => {
                                     return (
                                           <div
                                                 key={index}
-                                                className="break-inside-avoid p-4 mb-4 bg-secondary border-[1px] border-neutral-600 h-fit inline-block rounded-2xl shadow-md services-groupe"
+                                                className="break-inside-avoid p-4 mb-4 bg-secondary border-[1px] border-neutral-600 h-fit inline-block rounded-2xl shadow-md feedback-card"
                                           >
                                                 <div className="flex items-end gap-4">
                                                       <Image

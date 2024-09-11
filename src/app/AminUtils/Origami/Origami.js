@@ -12,6 +12,7 @@ import {
 import { TbBrandFiverr } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 import { FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 export const DivOrigami = () => {
       return (
@@ -22,28 +23,58 @@ export const DivOrigami = () => {
                                     key={1}
                                     className="bg-green-300 text-neutral-100"
                               >
-                                    <TbBrandFiverr />
+                                    <Link
+                                          className="w-full h-full "
+                                          href="https://fiiverr.com"
+                                          target="_blank"
+                                    >
+                                          <TbBrandFiverr />
+                                    </Link>
                               </LogoItem>,
                               <LogoItem
                                     key={3}
                                     className="bg-neutral-100 text-blue-500"
                               >
-                                    <SiFreelancer />
+                                    <Link 
+                                    className="w-full h-full"
+                                    href='https://freelancer.com'
+                                    target="_blank"
+                                    >
+                                          <SiFreelancer />
+                                    </Link>
                               </LogoItem>,
                               <LogoItem
                                     key={2}
                                     className="bg-green-500 text-neutral-100"
                               >
-                                    <SiUpwork />
+                                    <Link 
+                                    className="w-full h-full"
+                                    href='https://upwork.com'
+                                    target="_blank"
+                                    >
+                                          <SiUpwork />
+                                    </Link>
                               </LogoItem>,
                               <LogoItem key={4} className="bg-white text-black">
-                                    <SiGithub />
+                                    <Link 
+                                    className="w-full h-full"
+                                    href='https://github.com'
+                                    target="_blank"
+                                    >
+                                          <SiGithub />
+                                    </Link>
                               </LogoItem>,
                               <LogoItem
                                     key={5}
                                     className="bg-blue-500 text-neutral-100"
                               >
-                                    <FaLinkedinIn />
+                                    <Link 
+                                    className="w-full h-full"
+                                    href='https://linkedin.com'
+                                    target="_blank"
+                                    >
+                                          <FaLinkedinIn />
+                                    </Link>
                               </LogoItem>,
                         ]}
                   />
@@ -51,8 +82,8 @@ export const DivOrigami = () => {
       );
 };
 
-const DELAY_IN_MS = 2500;
-const TRANSITION_DURATION_IN_SECS = 1.5;
+const DELAY_IN_MS = 7000;
+const TRANSITION_DURATION_IN_SECS = 5;
 
 const LogoRolodex = ({ items }) => {
       const intervalRef = useRef(null);

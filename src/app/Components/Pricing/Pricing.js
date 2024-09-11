@@ -4,6 +4,7 @@ import { DivOrigami } from "@/app/AminUtils/Origami/Origami";
 import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import "./Pricing.scss";
+import PriceCard from "./PriceCard";
 
 const priceData = [
       {
@@ -62,7 +63,7 @@ const Pricing = () => {
       }, []);
 
       return (
-            <div id="pricing" className="py-32">
+            <div id="pricing" className="py-32 px-5">
                   <div>
                         <div className="flex flex-col justify-center items-center gap-8">
                               <div className="border border-buttonPrimary bg-buttonSecondary text-buttonPrimary px-4 py-2 rounded-full">
@@ -84,54 +85,10 @@ const Pricing = () => {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2.2rem] my-20 px-4 lg:px-0">
                         {priceData?.map((price, index) => (
-                              <div
-                                    key={index}
-                                    className="card bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]"
-                              >
-                                    <div className="text-start flex flex-col gap-4 ">
-                                          <h1 className="text-base font-extralight">
-                                                {price.plan}
-                                          </h1>
-                                          <p className="flex items-end gap-1 text-5xl font-extralight text-buttonPrimary">
-                                                {price.price}
-                                                <span className="text-lg text-white font-extralight">
-                                                      {" "}
-                                                      / {price.paymentCondition}
-                                                </span>
-                                          </p>
-                                          <p className="text-sm text-gray-500 underline">
-                                                {price.requests}
-                                          </p>
-                                    </div>
-                                    <div className="mt-4">
-                                          <ul className="flex flex-col gap-6">
-                                                {price.features.map(
-                                                      (feature, index) => (
-                                                            <li
-                                                                  key={index}
-                                                                  className="text-lg text-gray-500 flex items-center gap-2"
-                                                            >
-                                                                  <FaCheck className="text-green-500" />
-                                                                  {feature}
-                                                            </li>
-                                                      )
-                                                )}
-                                          </ul>
-                                    </div>
-                                    <div className="mt-4">
-                                          <div className="flex flex-col  justify-center gap-6">
-                                                <button className="bg-buttonPrimary text-white hover:bg-buttonSecondary hover:text-buttonPrimary duration-300 border border-buttonPrimary px-4 py-3 rounded-full">
-                                                      {price.actions.subscribe}
-                                                </button>
-                                                <button className="bg-buttonSecondary text-buttonPrimary hover:bg-neutral-700 hover:text-white duration-300 px-4 py-3 rounded-full">
-                                                      {price.actions.demo}
-                                                </button>
-                                          </div>
-                                    </div>
-                              </div>
+                              <PriceCard key={index} price={price} />
                         ))}
                         <div className=" flex flex-col md:flex-row lg:flex-col gap-10 md:col-span-2 lg:col-span-1">
-                              <div className="card min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
+                              <div className="price-card card min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
                                     <div>
                                           <h5 className="text-2xl font-extralight">
                                                 Also accepting orders from:
@@ -139,7 +96,7 @@ const Pricing = () => {
                                     </div>
                                     <DivOrigami />
                               </div>
-                              <div className="card min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
+                              <div className="price-card card min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
                                     <div className="flex flex-col gap-4">
                                           <h2 className="text-4xl font-extralight">
                                                 Refer & Earn

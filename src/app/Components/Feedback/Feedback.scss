@@ -44,7 +44,62 @@
       column-gap: 24px;
       /* Column gap */
       animation: scrollY 70s linear infinite;
-      /* Infinite scroll animation */
+
+
+      .feedback-card {
+            position: relative;
+
+            &::after {
+                  content: "";
+                  width: 1px;
+                  height: 7.5rem;
+                  background: linear-gradient(0deg,
+                              var(--white-stroke-color) 22.4%,
+                              var(--primary-color) 60.94%,
+                              var(--white-stroke-color));
+                  position: absolute;
+                  left: 1px;
+                  top: 80%;
+                  z-index: 20;
+                  opacity: 0;
+                  /* Initially hidden */
+                  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            }.feedback-card {
+                  position: relative;
+            
+                  &::after {
+                        content: "";
+                        width: 1px;
+                        height: 7.5rem;
+                        background: linear-gradient(
+                              0deg, 
+                              var(--white-stroke-color) 22.4%, 
+                              var(--primary-color) 60.94%, 
+                              var(--white-stroke-color)
+                        );
+                        position: absolute;
+                        left: -0.1rem;
+                        top: 80%;
+                        z-index: 20;
+                        opacity: 0; /* Initially hidden */
+                        transition: top 0.5s ease-in-out, ;
+                  }
+            
+                  &:hover::after {
+                        opacity: 1;
+                        top: 20%; /* Moves upwards on hover */
+                  }
+            }
+            
+
+            &:hover::after {
+                  opacity: 1;
+                  top: 20%;
+                  /* Moves upwards on hover */
+            }
+      }
+
+
 }
 
 .feedback-marquee-group>div {
