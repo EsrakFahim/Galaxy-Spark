@@ -8,7 +8,7 @@ import Magnetic from "../Magnetic/Magnetic";
 
 export default function Rounded({
       children,
-      backgroundColor = "#67b9b6",
+      backgroundColor = "#00FFE6",
       ...attributes
 }) {
       const circle = useRef(null);
@@ -62,7 +62,7 @@ export default function Rounded({
                         <div
                               ref={circle}
                               style={{ backgroundColor }}
-                              className="circle"
+                              className="circle hover:text-primary-light"
                         ></div>
                   </div>
             </Magnetic>
