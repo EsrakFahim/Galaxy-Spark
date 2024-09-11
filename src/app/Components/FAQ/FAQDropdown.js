@@ -42,8 +42,8 @@ const FAQDropdown = ({ title, answer }) => {
                   <div
                         className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-400 text-base  ${
                               accordionOpen
-                                    ? "grid-rows-[1fr] opacity-100"
-                                    : "grid-rows-[0fr] opacity-0"
+                                    ? "grid-rows-[1fr] opacity-100 block"
+                                    : "grid-rows-[0fr] opacity-0 hidden"
                         }`}
                   >
                         <div className="overflow-hidden ">{answer}</div>

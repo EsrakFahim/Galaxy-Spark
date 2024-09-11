@@ -16,7 +16,7 @@ import Link from "next/link";
 
 export const DivOrigami = () => {
       return (
-            <section className="flex h-full flex-col items-center justify-center gap-12  px-4  md:flex-row">
+            <section className=" lg:flex h-full flex-col items-center justify-center gap-12  px-4  md:flex-row">
                   <LogoRolodex
                         items={[
                               <LogoItem

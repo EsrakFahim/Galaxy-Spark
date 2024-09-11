@@ -6,7 +6,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 export const TextParallaxContentExample = () => {
       return (
-            <div className="">
+            <div id="why us?" className=" lg:py-32">
                   <div className="flex flex-col items-center gap-6 my-5 mb-20">
                         <div className="border border-buttonPrimary bg-buttonSecondary text-buttonPrimary rounded-full px-6 py-2">
                               Our Expertise 

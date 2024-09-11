@@ -88,7 +88,7 @@ const Pricing = () => {
                               <PriceCard key={index} price={price} />
                         ))}
                         <div className=" flex flex-col md:flex-row lg:flex-col gap-10 md:col-span-2 lg:col-span-1">
-                              <div className="price-card card min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
+                              <div className="price-card  min-h-[300px] lg:h-[60%] bg-secondary shadow-lg px-6 py-4 rounded-2xl border-[1px] border-[#313131]">
                                     <div>
                                           <h5 className="text-2xl font-extralight">
                                                 Also accepting orders from:
@@ -96,7 +96,7 @@ const Pricing = () => {
                                     </div>
                                     <DivOrigami />
                               </div>
-                              <div className="price-card card min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
+                              <div className="price-card  min-h-[150px] lg:h-[40%] bg-secondary shadow-lg px-6 py-5 lg:pt-8 rounded-2xl border-[1px] border-[#313131]">
                                     <div className="flex flex-col gap-4">
                                           <h2 className="text-4xl font-extralight">
                                                 Refer & Earn

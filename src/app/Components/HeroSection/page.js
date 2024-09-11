@@ -4,7 +4,7 @@ import React from "react";
 const page = () => {
       return (
             <div>
-                  <div className="flex flex-col items-center mt-[14rem] mb-[10rem] lg:mx-10 gap-5">
+                  <div className="flex flex-col items-center mt-[10rem] lg:mt-[14rem] mb-[10rem] lg:mx-10 gap-5">
                         <h1
                               style={{
                                     letterSpacing: "-1.5%",
@@ -19,7 +19,7 @@ const page = () => {
                               Next-gen web design, visuals, and content that
                               make your brand unforgettable.
                         </p>
-                        <div className="flex items-center gap-12">
+                        <div className="flex items-center gap-8 lg:gap-12">
                               <Link href="/#pricing">
                                     <button className="border border-buttonPrimary px-6 py-3 rounded-full bg-buttonPrimary text-primary-light hover:text-primary hover:bg-buttonSecondary duration-300 text-xs lg:text-base lg:font-medium flex items-center gap-3">
                                           See Plans & Pricing

@@ -26,7 +26,7 @@ const FAQQuestion = [
 
 const FAQ = () => {
       return (
-            <div id="faq" className="py-[100px] " >
+            <div id="faq" className="py-[100px] px-3" >
                   <div className="flex flex-col justify-center items-center gap-5 my-10">
                         <div className="border border-buttonPrimary bg-buttonSecondary text-buttonPrimary px-3 py-2 rounded-full">Insights</div>
                         <h1 className="text-4xl font-bold text-center text-primary">

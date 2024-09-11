@@ -13,6 +13,30 @@ export const PortfolioNav = ({ items, setActiveTab, activeTab }) => {
       );
 };
 
+// Utility hook to detect window size
+const useWindowSize = () => {
+      const [windowSize, setWindowSize] = useState({
+            width: undefined,
+            height: undefined,
+      });
+
+      React.useEffect(() => {
+            const handleResize = () => {
+                  setWindowSize({
+                        width: window.innerWidth,
+                        height: window.innerHeight,
+                  });
+            };
+
+            window.addEventListener("resize", handleResize);
+            handleResize(); // Initial call
+
+            return () => window.removeEventListener("resize", handleResize);
+      }, []);
+
+      return windowSize;
+};
+
 const SlideTabs = ({ items, setActiveTab, activeTab }) => {
       const [position, setPosition] = useState({
             left: 0,
@@ -36,7 +60,7 @@ const SlideTabs = ({ items, setActiveTab, activeTab }) => {
                               setPosition={setPosition}
                               onClick={() => setActiveTab(item.category)}
                               category={item.category}
-                              activeTab={activeTab} // Pass activeTab here
+                              activeTab={activeTab}
                         >
                               {item.category}
                         </Tab>
@@ -49,6 +73,11 @@ const SlideTabs = ({ items, setActiveTab, activeTab }) => {
 
 const Tab = ({ children, setPosition, onClick, activeTab, category }) => {
       const ref = useRef(null);
+      const size = useWindowSize();
+
+      // Split category name into first word and the rest
+      const firstWord = category.split(" ")[0];
+      const fullCategory = category;
 
       return (
             <li
@@ -71,7 +100,8 @@ const Tab = ({ children, setPosition, onClick, activeTab, category }) => {
                               : "text-white"
                   } duration-300`}
             >
-                  {children}
+                  {/* Display different text based on screen size */}
+                  {size.width <= 768 ? firstWord : fullCategory}
             </li>
       );
 };

@@ -44,12 +44,12 @@ const Navbar = () => {
                                                 alt="logo"
                                                 width={100}
                                                 height={100}
-                                                className="cursor-pointer w-32 h-14  object-contain"
+                                                className="cursor-pointer lg:w-32 lg:h-14  object-contain"
                                           />
                                     </div>
                               </Link>
                               <div>
-                                    <button className="border border-buttonPrimary px-8 py-4 rounded-full bg-buttonSecondary hover:bg-buttonPrimary duration-300 text-xs lg:text-base lg:font-medium flex items-center gap-1 hover:gap-3">
+                                    <button className="border border-buttonPrimary px-3 lg:px-8 py-4 rounded-full bg-buttonSecondary hover:bg-buttonPrimary duration-300 text-xs lg:text-base lg:font-medium hover:text-primary-light flex items-center gap-1 ">
                                           Take an appointment
                                           <AiOutlineRight size={20} />
                                     </button>

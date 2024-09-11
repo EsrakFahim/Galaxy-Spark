@@ -54,7 +54,7 @@ const Page = () => {
       };
 
       return (
-            <div id="portfolio" className="my-[20rem] pt-28">
+            <div id="portfolio" className="my-[10rem] lg:my-[20rem] lg:pt-28">
                   <div>
                         <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end">
                               <div className="flex flex-col justify-center items-center lg:items-start gap-6 text-center lg:text-start">

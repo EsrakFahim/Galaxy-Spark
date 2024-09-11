@@ -17,11 +17,13 @@ const page = () => {
                   <AboutUs />
                   <PortfolioSection />
                   <Services />
-                  <CurveLine />
+                  <div className="hidden lg:block">
+                        <CurveLine />
+                  </div>
                   <Pricing />
                   <TextParallaxContentExample />
-                  <FAQ/>
-                  <Feedback/>
+                  <FAQ />
+                  <Feedback />
             </div>
       );
 };
