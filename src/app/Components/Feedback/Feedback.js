@@ -170,9 +170,9 @@ const Feedback = () => {
                               satisfied with the results.
                         </p>
                   </div>
-                  <div className="w-full h-[80vh]  feedback_wrapper marquee">
+                  <div className="w-full h-[80vh]  feedback_wrapper feedback-marquee">
                         {/* Grid container for feedback cards */}
-                        <div className="marquee-group">
+                        <div className="feedback-marquee-group">
                               {feedbackData?.map((el, index) => {
                                     return (
                                           <div

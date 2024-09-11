@@ -12,6 +12,7 @@
             height: 18.5rem;
             pointer-events: none;
       }
+
       &::before {
             background: linear-gradient(0deg, #000, #0000);
             content: "";
@@ -27,7 +28,7 @@
       }
 }
 
-.marquee {
+.feedback-marquee {
       display: flex;
       flex-direction: column;
       gap: 100px;
@@ -35,15 +36,7 @@
       user-select: none;
 }
 
-.marquee-group-wrapper {
-      position: relative;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-}
-
-.marquee-group {
+.feedback-marquee-group {
       width: 100%;
       display: inline-block;
       columns: 300px auto;
@@ -54,7 +47,7 @@
       /* Infinite scroll animation */
 }
 
-.marquee-group>div {
+.feedback-marquee-group>div {
       break-inside: avoid;
       /* Prevent breaking inside columns */
       margin-bottom: 24px;
