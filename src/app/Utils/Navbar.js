@@ -36,15 +36,15 @@ const Navbar = () => {
                                     : "bg-transparent z-[2]" // Initial background
                         }`}
                   >
-                        <div className="w-screen flex justify-between items-center px-5 lg:px-44">
+                        <div className="w-screen flex justify-between items-center px-5 lg:px-48">
                               <Link href="/#home">
-                                    <div>
+                                    <div className="w-full h-full">
                                           <Image
                                                 src={logo} // Update with your logo path
                                                 alt="logo"
                                                 width={100}
                                                 height={100}
-                                                className="cursor-pointer w-32 h-14 "
+                                                className="cursor-pointer w-32 h-14  object-contain"
                                           />
                                     </div>
                               </Link>
