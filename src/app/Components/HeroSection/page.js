@@ -21,7 +21,7 @@ const page = () => {
                         </p>
                         <div className="flex items-center gap-12">
                               <Link href="/#pricing">
-                                    <button className="border border-buttonPrimary px-6 py-3 rounded-full bg-buttonPrimary hover:bg-buttonSecondary duration-300 text-xs lg:text-base lg:font-medium flex items-center gap-3">
+                                    <button className="border border-buttonPrimary px-6 py-3 rounded-full bg-buttonPrimary text-primary-light hover:text-primary hover:bg-buttonSecondary duration-300 text-xs lg:text-base lg:font-medium flex items-center gap-3">
                                           See Plans & Pricing
                                     </button>
                               </Link>
