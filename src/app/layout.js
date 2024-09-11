@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
                         className={`${inter.className} bg-background-dark text-primary`}
                   >
                         <div className=" w-full   overflow-hidden">
-                              <div className="w-full min-h-[22rem] lg:min-h-[23rem] mx-auto absolute top-0 lg:-top-28 left-0 right-0 -z-10">
+                              <div className="w-full lg:w-[1480px] min-h-[22rem] lg:min-h-[23rem] mx-auto absolute top-0  left-0 right-0 -z-10">
                                     <Image
                                           src={heroBG}
                                           alt="Hero_bg"

@@ -36,7 +36,7 @@ const Navbar = () => {
                                     : "bg-transparent z-[2]" // Initial background
                         }`}
                   >
-                        <div className="w-screen flex justify-between items-center px-5 lg:px-40">
+                        <div className="w-screen flex justify-between items-center px-5 lg:px-44">
                               <Link href="/#home">
                                     <div>
                                           <Image
