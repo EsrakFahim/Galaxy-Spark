@@ -19,9 +19,9 @@ module.exports = {
                               dark: "#151514",
                         },
                         buttonPrimary: {
-                              DEFAULT: "#67b9b6",
-                              light: "#67b9b6",
-                              dark: "#67b9b6",
+                              DEFAULT: "#00FFE6  ",
+                              light: "#00FFE6  ",
+                              dark: "#00FFE6  ",
                         },
                         buttonSecondary: {
                               DEFAULT: "#214444",
