@@ -258,6 +258,49 @@ const Feedback = () => {
                                           </div>
                                     );
                               })}
+                              {feedbackData?.map((el, index) => {
+                                    return (
+                                          <div
+                                                key={`${index}-duplicate`}
+                                                className="break-inside-avoid w-full p-4 mb-4 bg-secondary border-[1px] border-neutral-600 h-fit inline-block rounded-2xl shadow-md feedback-card"
+                                          >
+                                                <div className="flex items-end gap-4">
+                                                      <Image
+                                                            src={
+                                                                  el.client_image
+                                                            }
+                                                            alt={el.client_name}
+                                                            width={50}
+                                                            height={50}
+                                                            className="w-[50px] h-[50px] rounded-full object-contain"
+                                                      />
+                                                      <div>
+                                                            <h1 className="font-medium">
+                                                                  {
+                                                                        el.client_name
+                                                                  }
+                                                            </h1>
+                                                            <p className="text-xs text-neutral-500">
+                                                                  {
+                                                                        el.client_position
+                                                                  }
+                                                            </p>
+                                                      </div>
+                                                </div>
+                                                <div className="h-fit mt-4 text-neutral-400">
+                                                      <p>{el.review}</p>
+                                                </div>
+                                                <div className="h-fit mt-4 text-neutral-400">
+                                                      <p>
+                                                            <span className="font-medium">
+                                                                  Service:{" "}
+                                                            </span>
+                                                            {el.service}
+                                                      </p>
+                                                </div>
+                                          </div>
+                                    );
+                              })}
                         </div>
                   </div>
             </div>
