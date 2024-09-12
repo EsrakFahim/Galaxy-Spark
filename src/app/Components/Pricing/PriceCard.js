@@ -115,7 +115,7 @@ const TiltCard = ({ price }) => {
                               </div>
                               <div className="mt-4">
                                     <div className="flex flex-col  justify-center gap-6">
-                                          <button className="bg-buttonPrimary text-white hover:bg-buttonSecondary hover:text-buttonPrimary duration-300 border border-buttonPrimary px-4 py-3 rounded-full">
+                                          <button className="bg-buttonPrimary text-secondary hover:bg-buttonSecondary hover:text-buttonPrimary duration-300 border border-buttonPrimary px-4 py-3 rounded-full ">
                                                 {price.actions.subscribe}
                                           </button>
                                           <button className="bg-buttonSecondary text-buttonPrimary hover:bg-neutral-700 hover:text-white duration-300 px-4 py-3 rounded-full">

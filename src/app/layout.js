@@ -26,13 +26,13 @@ export default function RootLayout({ children }) {
                         className={`${inter.className} bg-background-dark text-primary`}
                   >
                         <div className=" max-w-screen lg:max-w-[1440px] mx-auto overflow-hidden">
-                              <div className="w-max object-contain lg:object-fill lg:w-[1440px] h-[26rem] lg:h-[43rem] mx-auto absolute top-0 lg:-top-20  left-0 right-0 -z-10">
+                              <div className="w-full object-cover  lg:object-contain lg:w-[1440px] h-[28rem] lg:h-[43rem] mx-auto absolute top-0 lg:-top-20  left-0 right-0 -z-10">
                                     <Image
                                           src={heroBG}
                                           alt="Hero_bg"
                                           width={1920}
                                           height={1280}
-                                          className="w-full h-full object-cover "
+                                          className="w-full h-full lg:object-contain "
                                     />
                               </div>
                               <div className="max-w-[1240px] overflow-hidden mx-auto">

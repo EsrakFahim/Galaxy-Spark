@@ -108,7 +108,7 @@ const Pricing = () => {
                                                 order
                                           </p>
                                     </div>
-                                    <button className="bg-buttonSecondary text-buttonPrimary hover:bg-neutral-700 hover:text-white duration-300 px-4 py-3 rounded-full w-full mt-10">
+                                    <button className="btn-style bg-buttonSecondary text-buttonPrimary hover:bg-neutral-700 hover:text-white duration-300 px-4 py-3 rounded-full w-full mt-10">
                                           Refer a friend
                                     </button>
                               </div>

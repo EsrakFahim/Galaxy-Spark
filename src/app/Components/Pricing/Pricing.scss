@@ -89,3 +89,33 @@
             /* Moves upwards on hover */
       }
 }
+
+// .btn-style {
+//       position: relative;
+//       overflow: hidden;
+//       /* Ensure the after element stays within the button boundaries */
+
+//       &::after {
+//             content: "";
+//             width: 0;
+//             height: 1px;
+//             background: linear-gradient(0deg,
+//                         var(--white-stroke-color) 22.4%,
+//                         var(--primary-color) 60.94%,
+//                         var(--white-stroke-color));
+//             position: absolute;
+//             left: 0;
+//             bottom: 1px;
+//             /* Position it at the bottom of the button */
+//             z-index: 0;
+//             opacity: 1;
+//             transition: width 0.5s ease-in-out;
+//             border-radius: 9999px;
+//             /* Fully rounded on both sides */
+//       }
+
+//       &:hover::after {
+//             width: 100%;
+//             /* Fully expands with rounded borders */
+//       }
+// }
