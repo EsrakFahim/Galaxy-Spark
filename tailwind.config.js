@@ -60,6 +60,10 @@ module.exports = {
                   animation: {
                         glow: "glow 3s infinite",
                   },
+                  screens: {
+                        1440: "1440px", // Custom breakpoint for 1440px
+                        1360: "1360px", // Custom breakpoint for 1360px
+                  },
             },
       },
       plugins: [

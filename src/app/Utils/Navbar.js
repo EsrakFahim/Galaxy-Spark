@@ -36,7 +36,7 @@ const Navbar = () => {
                                     : "bg-transparent z-[2]" // Initial background
                         }`}
                   >
-                        <div className="w-screen flex justify-between items-center px-5 lg:px-48">
+                        <div className="w-screen flex justify-between items-center px-5 1440:px-48">
                               <Link href="/#home">
                                     <div className="w-full h-full">
                                           <Image
@@ -56,7 +56,7 @@ const Navbar = () => {
                               </div>
                         </div>
                   </div>
-                  <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-[2] hidden lg:flex justify-center">
+                  <div className="absolute w-fit mx-auto top-1/2 left-0 right-0 -translate-y-1/2 z-[2] hidden lg:flex justify-center">
                         <ul className="flex items-center gap-10">
                               {[
                                     "About",

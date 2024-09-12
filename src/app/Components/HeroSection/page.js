@@ -4,12 +4,12 @@ import React from "react";
 const page = () => {
       return (
             <div>
-                  <div className="flex flex-col items-center mt-[10rem] lg:mt-[14rem] mb-[10rem] lg:mx-10 gap-5">
+                  <div className="flex flex-col items-center mt-[10rem]  1440:mt-[14rem] mb-[10rem] lg:mx-10 gap-5">
                         <h1
                               style={{
                                     letterSpacing: "-1.5%",
                               }}
-                              className="text-[9vw] lg:text-[4.5rem] text-center font-extralight leading-[1.1]"
+                              className="text-[9vw] 1360:text-[3.5rem] 1440:text-[4.5rem] text-center font-extralight leading-[1.1]"
                         >
                               Get a Full-Service <br /> Creative Team for One{" "}
                               <br />
