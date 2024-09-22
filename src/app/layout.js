@@ -5,6 +5,7 @@ import heroBG from "@/assets/hero-bg.png";
 import Navbar from "./Utils/Navbar";
 import Cursor from "./Utils/Cursor/Cursor";
 import LoadingAmin from "./AminUtils/LoadingAmin/LoadingAmin";
+import Footer from "./Components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
                               <div className="max-w-[1240px] overflow-hidden mx-auto">
                                     <Navbar />
                                     {children}
+                                    <Footer/>
                               </div>
                         </div>
                         <Cursor />
